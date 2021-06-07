@@ -1,10 +1,12 @@
 class NoteController {
-  constructor(noteModelClass) {
-    this._noteModelClass = noteModelClass
+  constructor(noteModelClass, noteView) {
+    this._noteModelClass = noteModelClass;
+    this._noteView = noteView;
     this.notes = [];
   }
 
   addNote(text) {
     this.notes.push(new this._noteModelClass(text))
+    this._noteView.renderNoteList(this.notes)
   }
 }
