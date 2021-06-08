@@ -1,4 +1,4 @@
-class noteModel {
+class NoteModel {
   constructor(text) {
     this.text = text
   }
