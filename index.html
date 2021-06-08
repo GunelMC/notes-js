@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Notes</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <script defer src="public/js/noteController.js"></script>
   <script defer src="public/js/noteModel.js"></script>
@@ -16,16 +19,12 @@
 </head>
 
 <body>
-  <h1>NOTES</h1>
-
-  <article>
-    <div>
-      <textarea id="text" rows="25" cols="45"></textarea>
-    </div>
+  <div id="note-adder">
+    <h1>Notes</h1>
+    <textarea id="text" rows="15" cols="45"></textarea>
     <button id="create">Create</button>
-    <label for="create"></label>
-    <div id="note-list"></div>
-  </article>
+  </div>
+  <div id="note-list"></div>
 
 </body>
 
