@@ -1,5 +1,5 @@
 function testNoteModelText() {
-  const note = new Note('test')
+  const note = new noteModel('test')
   assert.isTrue(note.text === 'test')
 }
 
