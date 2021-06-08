@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="style.css">
   <title>Notes</title>
 
-  <script src="public/js/countController.js"></script>
-  <script src="public/js/countModel.js"></script>
-  <script src="public/js/countView.js"></script>
-  <script src="public/js/index.js"></script>
+  <script defer src="public/js/noteController.js"></script>
+  <script defer src="public/js/noteModel.js"></script>
+  <script defer src="public/js/noteView.js"></script>
+  <script defer src="public/js/index.js"></script>
 
 </head>
 
@@ -20,10 +20,11 @@
 
   <article>
     <div>
-    <textarea id="text" rows="25" cols="45"></textarea>
+      <textarea id="text" rows="25" cols="45"></textarea>
     </div>
     <button id="create">Create</button>
     <label for="create"></label>
+    <div id="note-list"></div>
   </article>
 
 </body>
