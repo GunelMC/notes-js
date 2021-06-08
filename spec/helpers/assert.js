@@ -7,3 +7,31 @@ var assert = {
     }
   }
 }
+
+
+function expect(a) {
+  return {
+    toEqual: function(b) {
+      // compare a and b
+      if (a == b) {
+            console.log('Pass')
+      } else {
+        console.log('Fail')
+      }
+      },
+    toTripleEqual: function(b) {
+      // compare a and b
+      if (a === b) {
+            console.log('Pass')
+        } else {
+          console.log('Fail')
+        }
+    }
+  }
+}
+
+
+function it(label, callback) {
+  console.log(`Test: ${label}`)
+  callback()
+}
