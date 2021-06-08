@@ -8,7 +8,10 @@ class NoteView {
     let ul = document.createElement("ul")
     array.forEach(note => {
       let li = document.createElement("li")
-      li.append(note.text.slice(0, 20))
+      let a = document.createElement("a")
+      a.href = "#note1"
+      li.append(a)
+      a.append(note.text.slice(0, 20))
       ul.append(li)
     })
     this._noteListElement.innerHTML = ''
