@@ -9,7 +9,7 @@ class NoteView {
     array.forEach(note => {
       let li = document.createElement("li")
       let a = document.createElement("a")
-      a.href = "#note1"
+      a.href = `#${array.indexOf(note)}`
       li.append(a)
       a.append(note.text.slice(0, 20))
       ul.append(li)
@@ -17,5 +17,11 @@ class NoteView {
     this._noteListElement.innerHTML = ''
     this._noteListElement.append(ul)
   }
+
+   renderNote(note) {
+     let p = document.createElement("p")
+     p.innerHTML = note.text
+    this._noteListElement.append(p)
+   }
 }
 

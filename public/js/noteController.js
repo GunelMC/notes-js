@@ -9,4 +9,9 @@ class NoteController {
     this.notes.push(new this._noteModelClass(text))
     this._noteView.renderNoteList(this.notes)
   }
+
+  getNote(index) {
+    let note = this.notes[index]
+    this._noteView.renderNote(note)
+  }
 }

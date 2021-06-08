@@ -7,3 +7,8 @@ createButton.addEventListener('click', (event) => {
   const textArea = document.getElementById('text')
   noteController.addNote(textArea.value)
 })
+
+
+window.addEventListener("hashchange", ()=>{
+  noteController.getNote(window.location.hash.split("#")[1])
+})
