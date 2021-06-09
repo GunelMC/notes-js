@@ -4,13 +4,17 @@
 }
 
 #create {
-  display: block;
+  display: flex;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   max-width: 540px;
   margin: auto;
+  background-color: rgb(230, 182, 163);
+	font-size:16px;
+	font-weight:normal;
+	line-height:1.6em;
 }
 
 ul {
@@ -21,6 +25,33 @@ a {
   text-decoration: none;
 }
 
-#create {
-margin: 10px 0; 
+.button {
+  background-color:#333;
+	color:#fff;
+	padding:10px 15px;
+  border:none; 
+  margin-top: 15px; 
+}
+
+.button:hover{
+	background:black;
+	color:#fff;
+}
+
+.button {
+	background-color: rgb(223, 124, 91);
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.button:active {
+	transform: scale(0.98);
+}
+
+.button:focus {
+	outline: none
 }
