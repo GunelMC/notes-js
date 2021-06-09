@@ -1,5 +1,7 @@
 const noteListElement = document.getElementById('note-list')
-const noteView = new NoteView(noteListElement)
+const noteElement = document.getElementById('single-note')
+const noteAdderElement = document.getElementById('note-adder')
+const noteView = new NoteView(noteListElement, noteElement, noteAdderElement)
 const noteController = new NoteController(NoteModel, noteView)
 
 const createButton = document.getElementById('create')

@@ -1,8 +1,3 @@
-#note-adder {
-  margin: 0;
-  min-height: 50vh;
-}
-
 #text {
   display: block;
   resize: none;
@@ -10,10 +5,6 @@
 
 #create {
   display: block;
-}
-
-#note-list {
-  flex: none;
 }
 
 body {

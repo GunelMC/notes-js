@@ -1,7 +1,9 @@
 class NoteView {
 
-  constructor(noteListElement) {
+  constructor(noteListElement, noteElement, noteAdderElement) {
     this._noteListElement = noteListElement
+    this._noteElement = noteElement
+    this._noteAdderElement = noteAdderElement
   }
 
   renderNoteList(array) {
@@ -18,10 +20,12 @@ class NoteView {
     this._noteListElement.append(ul)
   }
 
-   renderNote(note) {
-     let p = document.createElement("p")
-     p.innerHTML = note.text
-    this._noteListElement.append(p)
-   }
+  renderNote(note) {
+    this._noteAdderElement.hidden = true
+    this._noteListElement.hidden = true
+    let p = document.createElement("p")
+    p.innerHTML = note.text
+    this._noteElement.append(p)
+  }
 }
 
