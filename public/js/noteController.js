@@ -6,8 +6,18 @@ class NoteController {
   }
 
   addNote(text) {
-    this.notes.push(new this._noteModelClass(text))
-    this._noteView.renderNoteList(this.notes)
+    fetch("https://makers-emojify.herokuapp.com/", {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({text: text})
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.notes.push(new this._noteModelClass(data.emojified_text))
+      this._noteView.renderNoteList(this.notes)
+    })
   }
 
   getNote(index) {
