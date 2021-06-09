@@ -2,7 +2,12 @@ class NoteController {
   constructor(noteModelClass, noteView) {
     this._noteModelClass = noteModelClass;
     this._noteView = noteView;
+    const storedNotes = JSON.parse(localStorage.getItem("notes"))
     this.notes = [];
+    if (storedNotes) {
+      this.notes = this.notes.concat(storedNotes)
+    }
+    this._noteView.renderNoteList(this.notes)
   }
 
   addNote(text) {
@@ -21,6 +26,7 @@ class NoteController {
     .then(data => {
       this.notes.push(new this._noteModelClass(data.emojified_text))
       this._noteView.renderNoteList(this.notes)
+      localStorage.setItem("notes", JSON.stringify(this.notes))
     })
   }
 
