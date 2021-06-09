@@ -6,6 +6,10 @@ class NoteController {
   }
 
   addNote(text) {
+    if (/^\s*$/.test(text)) {
+      return; 
+    }
+
     fetch("https://makers-emojify.herokuapp.com/", {
       headers: {
         'Content-Type': 'application/json'
