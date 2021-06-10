@@ -31,11 +31,19 @@ function expect(a) {
     },
 
     toHaveBeenCalledWithArguments: function(b) {
-      if (a.getCallArguments === b) {
-        console.log("Pass")
+      if (b instanceof Array) {
+        if (JSON.stringify(a.getCallArguments()) === JSON.stringify(b)) {
+          console.log("Pass")
+        } else {
+          console.log("Fail")
+        }   
       } else {
-        console.log("Fail")
-      }   
+        if (a.getCallArguments === b) {
+          console.log("Pass")
+        } else {
+          console.log("Fail")
+        }  
+      }
     }
   }
 }

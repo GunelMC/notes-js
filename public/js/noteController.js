@@ -10,12 +10,12 @@ class NoteController {
     this._noteView.renderNoteList(this.notes)
   }
 
-  addNote(text) {
+  async addNote(text) {
     if (/^\s*$/.test(text)) {
       return; 
     }
 
-    fetch("https://makers-emojify.herokuapp.com/", {
+    await fetch("https://makers-emojify.herokuapp.com/", {
       headers: {
         'Content-Type': 'application/json'
       },
