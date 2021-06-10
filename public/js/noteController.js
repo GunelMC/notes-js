@@ -34,4 +34,8 @@ class NoteController {
     let note = this.notes[index]
     this._noteView.renderNote(note)
   }
+
+  deleteNote(note) {
+     this.notes.delete(note) 
+  }
 }

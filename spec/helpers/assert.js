@@ -26,6 +26,13 @@ function expect(a) {
         } else {
           console.log('Fail')
         }
+    },
+    toBeInstanceOf: function(b) {
+      if (a instanceof b) {
+        console.log("Pass")
+      } else {
+        console.log("Fail")
+      }   
     }
   }
 }

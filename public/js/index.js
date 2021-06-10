@@ -4,6 +4,7 @@ const noteAdderElement = document.getElementById('note-adder')
 const noteView = new NoteView(noteListElement, noteElement, noteAdderElement)
 const noteController = new NoteController(NoteModel, noteView)
 
+
 const createButton = document.getElementById('create')
 createButton.addEventListener('click', (event) => {
   const textArea = document.getElementById('text')
@@ -12,5 +13,10 @@ createButton.addEventListener('click', (event) => {
 
 
 window.addEventListener("hashchange", ()=>{
-  noteController.getNote(window.location.hash.split("#")[1])
+  noteController.getNote(window.location.hash.split("#")[1]);
+})
+
+const deleteButton = document.getElementById('delete')
+deleteButton.addEventListener('click', (event) => {
+  noteController.deleteNote(window.location.hash.split("#")[1])
 })
