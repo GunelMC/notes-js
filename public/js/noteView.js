@@ -13,9 +13,13 @@ class NoteView {
       let li = document.createElement("li")
       let a = document.createElement("a")
       a.href = `#${array.indexOf(note)}`
-      li.append(a)
-      a.append(note.text.slice(0, 20))
-      ul.append(li)
+      a.append(li)
+      if (note.text.length > 20) {
+        li.append(note.text.slice(0, 20) + '...')
+      } else {
+        li.append(note.text)
+      }
+      ul.append(a)
     })
     this._noteAdderElement.hidden = false
     this._noteListElement.hidden = false
