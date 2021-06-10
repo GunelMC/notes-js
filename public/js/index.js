@@ -9,11 +9,16 @@ const createButton = document.getElementById('create')
 createButton.addEventListener('click', (event) => {
   const textArea = document.getElementById('text')
   noteController.addNote(textArea.value)
+  textArea.value = ""
 })
 
 
 window.addEventListener("hashchange", ()=>{
-  noteController.getNote(window.location.hash.split("#")[1]);
+  if (window.location.hash.split("#")[1] === undefined) {
+    return
+  } else {
+    noteController.getNote(window.location.hash.split("#")[1])
+  };
 })
 
 const deleteButton = document.getElementById('delete')

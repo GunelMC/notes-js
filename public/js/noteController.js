@@ -35,7 +35,9 @@ class NoteController {
     this._noteView.renderNote(note)
   }
 
-  deleteNote(note) {
-     this.notes.delete(note) 
+  deleteNote(index) {
+     this.notes.splice(index, 1) 
+     localStorage.setItem("notes", JSON.stringify(this.notes))
+     this._noteView.renderNoteList(this.notes)
   }
 }
