@@ -3,12 +3,13 @@ class noteModelClassDouble {
     this.text = text
   }
 }
+
 const noteViewDouble = {
   saved_args: null,
   numOfCalls: 0,
   renderNoteList: function(list) {
     this.saved_args = list;
-    this.numOfCalls ++; 
+    this.numOfCalls++; 
   }
 }
 
