@@ -1,15 +1,17 @@
 #text {
   display: block;
+	width: 100%;
   resize: none;
+	box-sizing: border-box;
 }
 
 #create {
-  display: flex;
+  width: 100%;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  max-width: 540px;
+  max-width: 360px;
   margin: auto;
   background-color: rgb(230, 182, 163);
 	font-size:16px;
