@@ -1,6 +1,6 @@
-function testNoteModelText() {
-  const note = new NoteModel('test')
-  assert.isTrue(note.text === 'test')
-}
-
-testNoteModelText()
+describe('NoteModel', () => {
+  it('has a text property', () => {
+    const noteModel = new NoteModel('Hello, World!')
+    expect(noteModel.text).toBe('Hello, World!')
+  })
+})
